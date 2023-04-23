@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Personal Portfolio Website</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/c85764a0fe.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	<div id="pt_header">
+		<div class="container">
+			<nav>
+				<img src="logo.jpg" class="logo">
+				<ul id="sidemenu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Me</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"> </i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"> </i>
+			</nav>
+			<div id="portfolio">
+				<div class="container">
+					<h1 class="sub-title">My Work</h1>
+					<div class="work-list">
+						<div class="work">
+							<img src="work-1.png">
+							<div class="layer">
+								<h3>Social Media App</h3>
+								<p>The app connects you to the talented people around the world. 
+								Download it from play store</p>
+								<a href="#"><i class="fas fa-external-link-alt"></i></a>
+							</div>
+						</div>
+						<div class="work">
+							<img src="work-2.png">
+							<div class="layer">
+								<h3>Music App</h3>
+								<p>The app connects you to the talented people around the world. 
+								Download it from play store</p>
+								<a href="#"><i class="fas fa-external-link-alt"></i></a>
+							</div>
+						</div>
+						<div class="work">
+							<img src="work-3.png">
+							<div class="layer">
+								<h3>Online Shopping App</h3>
+								<p>The app connects you to the talented people around the world. 
+								Download it from play store</p>
+								<a href="#"><i class="fas fa-external-link-alt"></i></a>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="btn">See more</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<script>
+		var tablinks=document.getElementsByClassName("tab-links");
+		var tabcontents=document.getElementsByClassName("tab-contents");
+		function opentab(tabname)
+		{
+			for(tablink of tablinks)
+			{
+				tablink.classList.remove("active-link")
+			}
+			for(tabcontent of tabcontents)
+			{
+				tabcontent.classList.remove("active-tab")
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+			
+		}
+	</script>
+	<script>
+		 var sidemeu=document.getElementById("sidemenu");
+		 
+		 function openmenu()
+		 {
+			sidemeu.style.right="0";
+		 }
+		 function closemenu()
+		 {
+			sidemeu.style.right="-200px";
+		 }
+	</script>
+	</body>
+</html>

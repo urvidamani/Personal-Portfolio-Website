@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Personal Portfolio Website</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/c85764a0fe.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	<div id="ab_header">
+		<div class="container">
+			<nav>
+				<img src="logo.jpg" class="logo">
+				<ul id="sidemenu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Me</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"> </i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"> </i>
+			</nav>
+			<div class="about">
+				<div class="row">
+				<div class="about-col-1"> 
+					<img src="abt.jpg">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title"> About Me </h1>
+					<p>I am an enthusiastic, self-motivated, reliable, responsible and hard working person. 
+					I am a mature team worker and adaptable to all challenging situations. I am able to work
+					well both in a team environment as well as using own initiative. I am able to work well 
+					under pressure and adhere to strict deadlines.</p>
+					
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+						<p class="tab-links" onclick="opentab('experience')">Experience</p>
+						<p class="tab-links" onclick="opentab('education')">Education</p>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><span>Data Analyst</span><br>statistical analysis of data and translate the numbers into a layman's terms.</li>
+							<li><span>Web Development</span><br>Web app Development</li>
+							<li><span>App Development</span><br>Building Android/ios apps</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>2021-Current</span><br>Data Analyst training at University of Sydney UTS.</li>
+							<li><span>2019-2021</span><br>Team Lead at Cisco System</li>
+							<li><span>2017-2019</span><br>Data Analyst Executive at Capital One</li>
+							<li><span>2016-2017</span><br>Internship at Blinkit eCommerce.</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><span>2016</span><br>Data Analyst training at University of Sydney UTS.</li>
+							<li><span>2016</span><br>Masters in Data Science from Nirma Ahmedabad</li>
+							<li><span>2014</span><br>Bachlores in Computer Science IIM Ahmedabad</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var tablinks=document.getElementsByClassName("tab-links");
+		var tabcontents=document.getElementsByClassName("tab-contents");
+		function opentab(tabname)
+		{
+			for(tablink of tablinks)
+			{
+				tablink.classList.remove("active-link")
+			}
+			for(tabcontent of tabcontents)
+			{
+				tabcontent.classList.remove("active-tab")
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+			
+		}
+	</script>
+	<script>
+		 var sidemeu=document.getElementById("sidemenu");
+		 
+		 function openmenu()
+		 {
+			sidemeu.style.right="0";
+		 }
+		 function closemenu()
+		 {
+			sidemeu.style.right="-200px";
+		 }
+	</script>
+	</body>
+</html>

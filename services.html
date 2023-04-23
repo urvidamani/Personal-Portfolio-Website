@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Personal Portfolio Website</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/c85764a0fe.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	<div id="sr_header">
+		<div class="container">
+			<nav>
+				<img src="logo.jpg" class="logo">
+				<ul id="sidemenu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Me</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"> </i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"> </i>
+			</nav>
+			<div id="services">
+				<div class="container">
+					<h1 class="sub-title">My  Services</h1>
+					<div class="services-list">
+						
+						<div>
+							<i class="fas fa-code"></i>
+							<h2>Data Analyst</h2>
+							<p>This can help understand how the business has performed and where it can
+							get better business operations in the future.</p>
+							<a href="#">Learn more</a>
+						</div>
+						<div>
+							<i class="fas fa-crop-alt"></i>
+							<h2>Web Design</h2>
+							<p>Web designers use their creative and software engineering/programming 
+							skills to design, build and improve websites.</p>
+							<a href="#">Learn more</a>
+						</div>
+						<div>
+							<i class="fab fa-app-store"></i>
+							<h2>App Development</h2>
+							<p>Our smartphone app development services include: Next-gen technologies, intelligent
+							algorithms and modern UI Design and development of native Android.</p>
+							<a href="#">Learn more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	<script>
+		var tablinks=document.getElementsByClassName("tab-links");
+		var tabcontents=document.getElementsByClassName("tab-contents");
+		function opentab(tabname)
+		{
+			for(tablink of tablinks)
+			{
+				tablink.classList.remove("active-link")
+			}
+			for(tabcontent of tabcontents)
+			{
+				tabcontent.classList.remove("active-tab")
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+			
+		}
+	</script>
+	<script>
+		 var sidemeu=document.getElementById("sidemenu");
+		 
+		 function openmenu()
+		 {
+			sidemeu.style.right="0";
+		 }
+		 function closemenu()
+		 {
+			sidemeu.style.right="-200px";
+		 }
+	</script>
+	</body>
+</html>
